@@ -22,7 +22,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.555"
         app:srcCompat="@drawable/button_red"
-        tools:srcCompat="@drawable/button_red" />
+        tools:srcCompat="@drawable/button_red"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/buttonblue"
@@ -37,7 +38,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonred"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/button_blue" />
+        app:srcCompat="@drawable/button_blue"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/buttongreen"
@@ -54,7 +56,8 @@
         app:layout_constraintStart_toEndOf="@+id/buttonblue"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.25"
-        app:srcCompat="@drawable/button_green" />
+        app:srcCompat="@drawable/button_green"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/buttonyellow"
@@ -68,7 +71,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttongreen"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/button_yellow" />
+        app:srcCompat="@drawable/button_yellow"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/buttonmagenta"
@@ -82,7 +86,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonyellow"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/button_magenta" />
+        app:srcCompat="@drawable/button_magenta"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/pencil"
@@ -97,7 +102,8 @@
         app:layout_constraintStart_toEndOf="@+id/buttonmagenta"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/ic_menu_edit" />
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/eraser"
@@ -112,5 +118,6 @@
         app:layout_constraintStart_toEndOf="@+id/pencil"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/ic_menu_delete" />
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        android:contentDescription="TODO" />
 </androidx.constraintlayout.widget.ConstraintLayout>

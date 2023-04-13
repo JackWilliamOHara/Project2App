@@ -27,6 +27,17 @@ public class Display extends View {
         super(context);
         init(context);
     }
+
+    public Display(Context context, @Nullable AttributeSet attrs) {
+
+        super(context, attrs);
+        init(context);
+    }
+
+    public Display(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init(context);
+    }
     private void init(Context context){
         paint_brush.setAntiAlias(true);
         paint_brush.setColor(Color.BLACK);
@@ -40,27 +51,33 @@ public class Display extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        float pointX = event.getX();
-        float pointY = event.getY();
+        float x = event.getX();
+        float y = event.getY();
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
-                path.moveTo(pointX,pointY);
+                path.moveTo(x,y);
                 invalidate();
                 return true;
             case MotionEvent.ACTION_MOVE:
-                path.lineTo(pointX,pointY);
-                break;
+                path.lineTo(x,y);
+                pathlist.add(path);
+                colorList.add(current_brush);
+                invalidate();
+                return true;
             default:
                 return false;
 
+
         }
-        postInvalidate();
-        return false;
     }
 
         @Override
         protected void onDraw(Canvas canvas) {
-            canvas.drawPath(path, paint_brush);
+            for (int i=0;i<pathlist.size();i++){
+                paint_brush.setColor(colorList.get(i));
+                canvas.drawPath(pathlist.get(i),paint_brush);
+                invalidate();
+            }
         }
     }
 

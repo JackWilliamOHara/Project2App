@@ -20,8 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Display display = new Display(this);
-        setContentView(display);
+        setContentView(R.layout.activity_main);
     }
 
     public void pencil(View view) {

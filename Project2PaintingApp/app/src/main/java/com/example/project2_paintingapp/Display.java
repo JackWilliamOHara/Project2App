@@ -1,14 +1,13 @@
 package com.example.project2_paintingapp;
 
-import static com.example.project2_paintingapp.MainActivity.paint_brush;
-import static com.example.project2_paintingapp.MainActivity.path;
+import static com.example.project2_paintingapp.Canvas.paint_brush;
+import static com.example.project2_paintingapp.Canvas.path;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.icu.util.LocaleData;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;

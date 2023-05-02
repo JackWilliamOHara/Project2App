@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/original"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Canvas">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="413dp"
+        android:layout_height="636dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            layout="@layout/view_display"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="411dp"
+        android:layout_height="94dp"
+        android:background="@drawable/tools_design"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/eraser"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="15dp"
+            android:contentDescription="eraser"
+            android:onClick="eraser"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pencil"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/button_white" />
+
+        <ImageView
+            android:id="@+id/pencil"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="15dp"
+            android:contentDescription="pencil"
+            android:onClick="pencil"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/eraser"
+            app:layout_constraintStart_toEndOf="@+id/buttonmagenta"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/button_black" />
+
+        <ImageView
+            android:id="@+id/buttonyellow"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="15dp"
+            android:contentDescription="yellow"
+            android:onClick="yellowColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonmagenta"
+            app:layout_constraintStart_toEndOf="@+id/buttongreen"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/button_yellow" />
+
+        <ImageView
+            android:id="@+id/buttongreen"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="15dp"
+            android:contentDescription="green"
+            android:onClick="greenColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonyellow"
+            app:layout_constraintStart_toEndOf="@+id/buttonblue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/button_green" />
+
+        <ImageView
+            android:id="@+id/buttonmagenta"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="134dp"
+            android:layout_marginBottom="13dp"
+            android:contentDescription="pink"
+            android:onClick="magentaColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonyellow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/button_magenta" />
+
+        <ImageView
+            android:id="@+id/buttonblue"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="15dp"
+            android:contentDescription="blue"
+            android:onClick="blueColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttongreen"
+            app:layout_constraintStart_toEndOf="@+id/buttonred"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/button_blue" />
+
+        <ImageView
+            android:id="@+id/buttonred"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="15dp"
+            android:contentDescription="red"
+            android:onClick="redColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonblue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/button_red"
+            tools:srcCompat="@drawable/button_red" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -50,113 +50,126 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true">
 
-        <ImageView
+        <Button
             android:id="@+id/eraser"
-            android:layout_width="49dp"
+            android:layout_width="40dp"
             android:layout_height="49dp"
             android:layout_marginStart="1dp"
             android:layout_marginTop="28dp"
             android:layout_marginEnd="26dp"
             android:layout_marginBottom="15dp"
+            android:backgroundTint="#FFFFFF"
             android:contentDescription="eraser"
             android:onClick="eraser"
+            app:cornerRadius="100dp"
+            app:icon="@drawable/button_white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/pencil"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/button_white" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        <Button
             android:id="@+id/pencil"
-            android:layout_width="49dp"
+            android:layout_width="40dp"
             android:layout_height="49dp"
             android:layout_marginTop="28dp"
             android:layout_marginEnd="1dp"
             android:layout_marginBottom="15dp"
+            android:backgroundTint="#000000"
             android:contentDescription="pencil"
             android:onClick="pencil"
+            app:cornerRadius="100dp"
+            app:icon="@drawable/button_black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/eraser"
             app:layout_constraintStart_toEndOf="@+id/buttonmagenta"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/button_black" />
+            app:layout_constraintVertical_bias="1.0" />
 
-        <ImageView
+        <Button
             android:id="@+id/buttonyellow"
-            android:layout_width="49dp"
+            android:layout_width="40dp"
             android:layout_height="49dp"
             android:layout_marginTop="28dp"
             android:layout_marginEnd="1dp"
             android:layout_marginBottom="15dp"
+            android:backgroundTint="#FFC800"
             android:contentDescription="yellow"
             android:onClick="yellowColor"
+            app:cornerRadius="100dp"
+            app:icon="@drawable/button_yellow"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/buttonmagenta"
             app:layout_constraintStart_toEndOf="@+id/buttongreen"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/button_yellow" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        <Button
             android:id="@+id/buttongreen"
-            android:layout_width="49dp"
+            android:layout_width="40dp"
             android:layout_height="49dp"
             android:layout_marginStart="1dp"
             android:layout_marginTop="28dp"
             android:layout_marginBottom="15dp"
+            android:backgroundTint="#1AFF00"
             android:contentDescription="green"
             android:onClick="greenColor"
+            app:cornerRadius="100dp"
+            app:icon="@drawable/button_green"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/buttonyellow"
             app:layout_constraintStart_toEndOf="@+id/buttonblue"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/button_green" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        <Button
             android:id="@+id/buttonmagenta"
-            android:layout_width="49dp"
+            android:layout_width="40dp"
             android:layout_height="49dp"
             android:layout_marginTop="28dp"
             android:layout_marginEnd="134dp"
             android:layout_marginBottom="13dp"
+            android:backgroundTint="#FF00F2"
             android:contentDescription="pink"
             android:onClick="magentaColor"
+            app:cornerRadius="100dp"
+            app:icon="@drawable/button_magenta"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/buttonyellow"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/button_magenta" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        <Button
             android:id="@+id/buttonblue"
-            android:layout_width="49dp"
+            android:layout_width="40dp"
             android:layout_height="49dp"
             android:layout_marginStart="1dp"
             android:layout_marginTop="28dp"
             android:layout_marginEnd="1dp"
             android:layout_marginBottom="15dp"
+            android:backgroundTint="#0048FF"
             android:contentDescription="blue"
             android:onClick="blueColor"
+            app:cornerRadius="100dp"
+            app:icon="@drawable/button_blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/buttongreen"
             app:layout_constraintStart_toEndOf="@+id/buttonred"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/button_blue" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        <Button
             android:id="@+id/buttonred"
-            android:layout_width="49dp"
+            android:layout_width="40dp"
             android:layout_height="49dp"
             android:layout_marginTop="28dp"
             android:layout_marginBottom="15dp"
+            android:backgroundTint="#FF0000"
             android:contentDescription="red"
             android:onClick="redColor"
+            app:cornerRadius="100dp"
+            app:icon="@drawable/button_red"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/buttonblue"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/button_red"
-            tools:srcCompat="@drawable/button_red" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>

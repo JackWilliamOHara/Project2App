@@ -51,6 +51,12 @@ public class Home extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void goPlay(View view)
+    {
+        Intent i = new Intent(Home.this, Play.class);
+        startActivity(i);
+    }
+
     public void goExit(View view)
     {
         finish();

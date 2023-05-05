@@ -24,6 +24,9 @@
             android:name=".Can3"
             android:exported="false" />
         <activity
+            android:name=".Play"
+            android:exported="false" />
+        <activity
             android:name=".Home"
             android:exported="true">
             <intent-filter>

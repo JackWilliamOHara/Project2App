@@ -34,8 +34,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <include
-            android:id="@+id/include"
+        <ImageView
+            android:id="@+id/finalimage"
             layout="@layout/view_display"
             android:layout_width="408dp"
             android:layout_height="647dp"
@@ -52,7 +52,7 @@
             android:layout_marginEnd="1dp"
             android:onClick="goNext"
             android:text="Next"
-            app:layout_constraintBottom_toTopOf="@+id/include"
+            app:layout_constraintBottom_toTopOf="@+id/finalimage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

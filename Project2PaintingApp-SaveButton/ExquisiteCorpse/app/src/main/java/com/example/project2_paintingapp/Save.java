@@ -20,6 +20,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -35,9 +37,13 @@ public class Save extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         setContentView(R.layout.save);
 
         saveimage =  (Button)findViewById(R.id.savegallery);
+        imageView = (ImageView) findViewById(R.id.finalimage);
 
         ActivityCompat.requestPermissions(Save.this,new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
         ActivityCompat.requestPermissions(Save.this,new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE},1);
@@ -84,8 +90,5 @@ public class Save extends AppCompatActivity {
     {
         Intent i = new Intent(Save.this, Home.class);
         startActivity(i);
-    }
-
-    public void onClick(View view) {
     }
 }

@@ -8,20 +8,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import static com.example.project2_paintingapp.Canvas.paint_brush;
 import static com.example.project2_paintingapp.Canvas.path;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
-public class Join3 extends AppCompatActivity {
+public class Can1 extends AppCompatActivity {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.join3);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
+        setContentView(R.layout.canvaspl1);
     }
 
     public void pencil(View view) {
@@ -62,11 +66,5 @@ public class Join3 extends AppCompatActivity {
     private void currentColor(int c) {
         current_brush = c;
         path = new Path();
-    }
-
-    public void goNext(View view)
-    {
-        Intent i = new Intent(Join3.this, Save.class);
-        startActivity(i);
     }
 }

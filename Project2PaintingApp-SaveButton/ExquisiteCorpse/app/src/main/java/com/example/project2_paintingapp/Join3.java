@@ -14,14 +14,19 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
-public class Join1 extends AppCompatActivity {
+public class Join3 extends AppCompatActivity {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.join1);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
+        setContentView(R.layout.join3);
     }
 
     public void pencil(View view) {
@@ -66,7 +71,7 @@ public class Join1 extends AppCompatActivity {
 
     public void goNext(View view)
     {
-        Intent i = new Intent(Join1.this, Join2.class);
+        Intent i = new Intent(Join3.this, Save.class);
         startActivity(i);
     }
 }

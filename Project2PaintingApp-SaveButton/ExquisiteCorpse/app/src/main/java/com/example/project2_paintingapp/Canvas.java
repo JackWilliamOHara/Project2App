@@ -5,22 +5,28 @@ import static com.example.project2_paintingapp.Display.current_brush;
 import static com.example.project2_paintingapp.Display.pathlist;
 
 import androidx.appcompat.app.AppCompatActivity;
-import static com.example.project2_paintingapp.Canvas.paint_brush;
-import static com.example.project2_paintingapp.Canvas.path;
 
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
-public class Can3 extends AppCompatActivity {
+public class Canvas extends AppCompatActivity {
 
+    public static Path path = new Path();
+    public static Paint paint_brush = new Paint();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.canvaspl3);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
+        setContentView(R.layout.canvas);
+
     }
 
     public void pencil(View view) {
